@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="m-5">
+    <!-- nav -->
+    <nav class="bg-[#262D33] text-white text-[14px] p-4">
+      <div class="flex justify-between items-center">
+        <a href="#" class="font-bold text-lg md:hidden"
+          ><img src="./assets/logo.png" alt=""
+        /></a>
+        <div class="hidden md:flex md:justify-between gap-[78px]">
+          <a class="hover:text-[#6E99AE]" href="#">NEWS</a>
+          <a class="hover:text-[#6E99AE]" href="#">OPINION</a>
+          <a class="hover:text-[#6E99AE]" href="#">SCIENCE</a>
+          <a class="hover:text-[#6E99AE]" href="#">LIFE</a>
+          <a class="hover:text-[#6E99AE]" href="#">TRAVEL</a>
+          <a class="hover:text-[#6E99AE]" href="#">MONEYS</a>
+          <a class="hover:text-[#6E99AE]" href="#">ART & DESIGN</a>
+          <a class="hover:text-[#6E99AE]" href="#">SPORTS</a>
+          <a class="hover:text-[#6E99AE]" href="#">PEOPLE</a>
+          <a class="hover:text-[#6E99AE]" href="#">HEALTH</a>
+          <a class="hover:text-[#6E99AE]" href="#">EDUCATION</a>
+        </div>
+        <label for="menu-toggle" class="md:hidden cursor-pointer text-2xl">
+          ☰
+        </label>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="hidden" />
+      <div class="mobile-menu md:hidden">
+        <a href="#">NEWS</a>
+        <a href="#">OPINION</a>
+        <a href="#">SCIENCE</a>
+        <a href="#">LIFE</a>
+        <a href="#">TRAVEL</a>
+        <a href="#">MONEYS</a>
+        <a href="#">ART & DESIGN</a>
+        <a href="#">SPORTS</a>
+        <a href="#">PEOPLE</a>
+        <a href="#">HEALTH</a>
+        <a href="#">EDUCATION</a>
+      </div>
+    </nav>
+    <!-- main -->
+    <main
+      class="bg-[url('./assets/mainbg.png')] bg-cover bg-center md:flex md:justify-between md:items-start p-6"
+    >
+      <!-- main div1 -->
+      <div class="md:pl-[55px]">
+        <div class="flex gap-3 mb-14 md:mb-[145px]">
+          <div><img src="./assets/Avatar.svg" alt="" /></div>
+          <div>
+            <h4 class="text-white text-[14px]">By Benjamin Turner</h4>
+            <p class="text-white text-[12px] opacity-[40%]">Traveler</p>
+          </div>
+        </div>
+        <h4 class="text-[#4592FF] text-[12px]">Destinations</h4>
+        <h1 class="max-w-[598px] text-white text-[40px] font-bold mb-12">
+          In Southeast England, White Cliffs and Fish
+        </h1>
+        <div class="md:flex md:gap-6">
+          <button
+            class="bg-[#4592FF] mb-[100px] text-[white] px-[25px] py-[10px] text-[14px] rounded-3xl"
+          >
+            Read more →
+          </button>
+          <!-- audio ishlaydi -->
+          <div
+            class="relative mb-6 w-[270px] h-[90px] bg-cover bg-center rounded-lg overflow-hidden"
+            style="background-image: url('your-bg.jpg')"
+          >
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex items-center px-4">
+              <button
+                id="playBtn"
+                class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full border border-white/40 text-white text-lg"
+              >
+                ▶
+              </button>
+              <div class="ml-3 text-white">
+                <p class="text-sm">The chalk cliff of Beachy Head</p>
+                <span id="time" class="text-xs opacity-80">00:00</span>
+              </div>
+            </div>
+            <audio id="audio" src="./assets/mountain.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <!-- Checkbox toggle -->
+        <input type="checkbox" id="close-card" class="peer hidden" />
+
+        <!-- Card -->
+        <div
+          class="bg-white p-4 rounded-lg shadow w-72 animate-slide-in-right peer-checked:hidden"
+        >
+          <!-- Close button -->
+          <label
+            for="close-card"
+            class="absolute top-2 right-2 text-gray-400 cursor-pointer text-lg font-bold hover:text-red-500"
+          >
+            ×
+          </label>
+
+          <h2 class="text-gray-600 font-semibold text-sm mb-4">
+            RECOMMENDED FOR YOU
+          </h2>
+
+          <div class="divide-y">
+            <div class="py-3">
+              <p class="text-xs font-semibold text-green-600 uppercase">Food</p>
+              <p class="text-sm font-medium flex items-center justify-between">
+                For Chicken-Fried Steak, Too Much Is Just Enough
+                <span class="text-gray-400">➔</span>
+              </p>
+            </div>
+            <div class="py-3">
+              <p class="text-xs font-semibold text-blue-600 uppercase">Cars</p>
+              <p class="text-sm font-medium">
+                Storm Has Car Dealers Doing Swift Business
+              </p>
+            </div>
+            <div class="py-3">
+              <p class="text-xs font-semibold text-purple-600 uppercase">
+                Movies
+              </p>
+              <p class="text-sm font-medium">
+                War Is Hell? In New Military Dramas, It’s One-Dimensional
+              </p>
+            </div>
+            <div class="py-3">
+              <p class="text-xs font-semibold text-orange-600 uppercase">NFL</p>
+              <p class="text-sm font-medium flex items-center justify-between">
+                11 surprising stat rankings for active NFL players
+                <span class="text-gray-400">➔</span>
+              </p>
+            </div>
+            <div class="py-3">
+              <p class="text-xs font-semibold text-teal-600 uppercase">
+                Tech Reviews
+              </p>
+              <p class="text-sm font-medium">
+                The bookcases you can buy online and assemble yourself
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section>
+      <!-- birinchi 2ta element birinchi qator⇩⇩⇩ -->
+      <div class="grid grid-cols-1 gap-4 my-4 md:grid-cols-2">
+        <!-- birinchi div⇩⇩⇩ -->
+        <div class="md:flex border border-cyan-200 p-4 rounded-lg mb-5">
+          <div>
+            <hr class="border-t border-dashed border-gray-300 my-4" />
+            <p class="uppercase text-[#6E99AE] text-[12px] mb-5">cars</p>
+            <h2 class="max-w-[238px] text-[25px] text-[#262D33] mb-6">
+              The joy of replicas: A $ 5 million car for $ 50,000
+            </h2>
+            <p class="max-w-[228px] text-[#4B5157] text-[14px] mb-4">
+              The 31-year-old self-taught engineer and former amateur racer
+              spends his days building artful recreations of one of most iconic
+              sports cars
+            </p>
+          </div>
+          <div>
+            <img src="./assets/car.png" alt="" class="hidden md:block" />
+          </div>
+        </div>
+        <!-- ikkinchi div⇩⇩⇩ -->
+        <div
+          class="p-5 bg-cover bg-center"
+          style="background: url(./assets/popularbg.png) no-repeat"
+        >
+          <span class="bg-[#3DC47E] py-1 px-3 text-[12px] text-white"
+            >Popular</span
+          >
+          <p class="uppercase text-[#E7D9FF] text-[12px] mb-3 mt-[135px]">
+            Art & Design
+          </p>
+          <p class="max-w-[203px] text-[16px] font-bold text-white mb-7">
+            Invisible ink: the weird world of tattoo removal – in pictures
+          </p>
+          <div class="flex gap-3 items-center mb-4">
+            <div><img src="./assets/jessica.svg" alt="" /></div>
+            <div>
+              <p class="text-white text-[14px]">By Sarah Jenkins</p>
+              <div class="flex gap-1">
+                <p class="text-white opacity-[40%] text-[12px]">Sept 26</p>
+                <img src="./assets/Comment.png" alt="" />
+                <p class="text-white opacity-[40%] text-[12px]">16</p>
+                <img src="./assets/like.png" alt="" />
+                <p class="text-white opacity-[40%] text-[12px]">832</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pastki 5ta card⇩⇩⇩ -->
+      <div class="md:flex">
+        <div class="rounded-xl border border-gray-300 mb-4">
+          <div class="flex justify-center items-center">
+            <img src="./assets/cat.png" alt="" />
+          </div>
+          <h3
+            class="text-[#262D33] max-w-[213px] text-[16px] mx-6 font-semibold my-4"
+          >
+            200+ Doomed Cats Saved From Euthanization
+          </h3>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 p-5">
+          <div class="p-6 border border-gray-300 rounded-2xl mb-6">
+            <h3 class="text-[#262D33] text-[16px] mb-2">
+              Is Coffee Bad for Bones?
+            </h3>
+            <p class="text-[#4B5157] text-[14px] max-w-[300px] mb-2">
+              Coffee drinkers may excrete more calcium, but it doesn’t appear to
+              weaken bones
+            </p>
+            <p class="text-[#939699] text-[12px] mb-3">Oct 15</p>
+          </div>
+          <div class="p-6 border border-gray-300 rounded-2xl mb-6">
+            <h3 class="text-[#262D33] text-[16px] mb-2">
+              Is Coffee Bad for Bones?
+            </h3>
+            <p class="text-[#4B5157] text-[14px] max-w-[300px] mb-2">
+              Coffee drinkers may excrete more calcium, but it doesn’t appear to
+              weaken bones
+            </p>
+            <p class="text-[#939699] text-[12px] mb-3">Oct 15</p>
+          </div>
+          <div class="p-6 border border-gray-300 rounded-2xl mb-6">
+            <h3 class="text-[#262D33] text-[16px] mb-2">
+              Is Coffee Bad for Bones?
+            </h3>
+            <p class="text-[#4B5157] text-[14px] max-w-[300px] mb-2">
+              Coffee drinkers may excrete more calcium, but it doesn’t appear to
+              weaken bones
+            </p>
+            <p class="text-[#939699] text-[12px] mb-3">Oct 15</p>
+          </div>
+          <div class="p-6 border border-gray-300 rounded-2xl mb-6">
+            <h3 class="text-[#262D33] text-[16px] mb-2">
+              Is Coffee Bad for Bones?
+            </h3>
+            <p class="text-[#4B5157] text-[14px] max-w-[300px] mb-2">
+              Coffee drinkers may excrete more calcium, but it doesn’t appear to
+              weaken bones
+            </p>
+            <p class="text-[#939699] text-[12px] mb-3">Oct 15</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- flower -->
+    <section
+      class="bg-[url('./assets/flowerbg.png')] bg-cover bg-center min-h-[300px]"
+    >
+      <div class="flex justify-center">
+        <h2
+          class="max-w-[946px] text-[20px] md:text-[30px] font-semibold text-center text-white pt-[50px] pb-[25px] md:text-[40px]"
+        >
+          The Big Bloom or «How Flowering Plants Changed the World»
+        </h2>
+      </div>
+      <div class="flex justify-center">
+        <button
+          class="bg-[#4592FF] mb-14 text-[white] px-[25px] py-[10px] text-[14px] rounded-3xl"
+        >
+          Read more →
+        </button>
+      </div>
+    </section>
+
+    <section
+      class="grid grid-cols-1 px-4 py-[30px] md:px-[80px] md:grid-cols-3 gap-[30px]"
+    >
+      <div class="bg-[#FFFFFF] rounded-md md:col-span-2">
+        <div class="flex flex-col gap-5 p-4 md:flex-row">
+          <img src="./assets/flights.png" alt="" />
+          <div>
+            <div class="flex flex-col gap-3">
+              <div class="flex justify-between">
+                <h5 class="text-[#4592FF] text-[20px]">Flights</h5>
+                <div><img src="./img/Bookmark.svg" alt="" /></div>
+              </div>
+              <h2 class="text-[#262D33] text-[20px] max-w-[400px]">
+                Passengers Suffer as Crowded Field Puts Pressure on Europe’s
+                Airlines
+              </h2>
+              <p class="text-[#4B5157] text-[14px] max-w-[400px]">
+                Weaker carriers have fallen by the wayside amid fierce
+                competition, while others have been hit by bad luck. The result:
+                thousands of canceled flights.
+              </p>
+              <div class="flex gap-2 items-center">
+                <h5 class="text-[#939699] text-[12px]">Aug 6</h5>
+                <div><img src="./img/Comment.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">342</h5>
+                <div><img src="./img/Heart.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">830</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="flex flex-col gap-5 p-4 md:flex-row">
+          <img src="./assets/food.png" alt="" />
+          <div>
+            <div class="flex flex-col gap-3">
+              <div class="flex justify-between">
+                <h5 class="text-[blue] text-[20px]">Flights</h5>
+                <div><img src="./img/Bookmark.svg" alt="" /></div>
+              </div>
+              <h2 class="text-[#262D33] text-[20px] max-w-[400px]">
+                Three Courses, 20 Euros: The Affordable Dining Renaissance in
+                Paris
+              </h2>
+              <p class="text-[#4B5157] text-[14px] max-w-[400px]">
+                Weaker carriers have fallen by the wayside amid fierce
+                competition, while others have been hit by bad luck. The result:
+                thousands of canceled flights.
+              </p>
+              <div class="flex gap-2 items-center">
+                <h5 class="text-[#939699] text-[12px]">Aug 6</h5>
+                <div><img src="./img/Comment.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">342</h5>
+                <div><img src="./img/Heart.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">830</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="flex flex-col gap-5 p-4 md:flex-row">
+          <img src="./assets/./sciense.png" alt="" />
+          <div>
+            <div class="flex flex-col gap-3">
+              <div class="flex justify-between">
+                <h5 class="text-[green] text-[20px]">Flights</h5>
+                <div><img src="./img/Bookmark.svg" alt="" /></div>
+              </div>
+              <h2 class="text-[#262D33] text-[20px] max-w-[400px]">
+                Watch the High-Flying Physics of a Plant’s Exploding Fruits
+              </h2>
+              <p class="text-[#4B5157] text-[14px] max-w-[400px]">
+                Weaker carriers have fallen by the wayside amid fierce
+                competition, while others have been hit by bad luck. The result:
+                thousands of canceled flights.
+              </p>
+              <div class="flex gap-2 items-center">
+                <h5 class="text-[#939699] text-[12px]">Aug 6</h5>
+                <div><img src="./img/Comment.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">342</h5>
+                <div><img src="./img/Heart.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">830</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="flex flex-col gap-5 p-4 md:flex-row">
+          <img src="./assets/./health.png" alt="" />
+          <div>
+            <div class="flex flex-col gap-3">
+              <div class="flex justify-between">
+                <h5 class="text-[yellow] text-[20px]">Flights</h5>
+                <div><img src="./img/Bookmark.svg" alt="" /></div>
+              </div>
+              <h2 class="text-[#262D33] text-[20px] max-w-[400px]">
+                How the Shape of Your Ears Affects What You Hear
+              </h2>
+              <p class="text-[#4B5157] text-[14px] max-w-[400px]">
+                Weaker carriers have fallen by the wayside amid fierce
+                competition, while others have been hit by bad luck. The result:
+                thousands of canceled flights.
+              </p>
+              <div class="flex gap-2 items-center">
+                <h5 class="text-[#939699] text-[12px]">Aug 6</h5>
+                <div><img src="./img/Comment.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">342</h5>
+                <div><img src="./img/Heart.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">830</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="flex flex-col gap-5 p-4 md:flex-row">
+          <div><img src="./assets/./science2.png" alt="" /></div>
+          <div>
+            <div class="flex flex-col gap-3">
+              <div class="flex justify-between">
+                <h5 class="text-[black] text-[20px]">Flights</h5>
+                <div><img src="./img/Bookmark.svg" alt="" /></div>
+              </div>
+              <h2 class="text-[#262D33] text-[20px] max-w-[400px]">
+                Forests Protect the Climate. A Future With More Storms Would
+                Mean Trouble.
+              </h2>
+              <p class="text-[#4B5157] text-[14px] max-w-[400px]">
+                Weaker carriers have fallen by the wayside amid fierce
+                competition, while others have been hit by bad luck. The result:
+                thousands of canceled flights.
+              </p>
+              <div class="flex gap-2 items-center">
+                <h5 class="text-[#939699] text-[12px]">Aug 6</h5>
+                <div><img src="./img/Comment.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">342</h5>
+                <div><img src="./img/Heart.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">830</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="flex flex-col gap-5 p-4 md:flex-row">
+          <img src="./assets/art.png" alt="" />
+          <div>
+            <div class="flex flex-col gap-3">
+              <div class="flex justify-between">
+                <h5 class="text-[red] text-[20px]">Flights</h5>
+                <div><img src="./img/Bookmark.svg" alt="" /></div>
+              </div>
+              <h2 class="text-[#262D33] text-[20px] max-w-[400px]">
+                New Contemporary Institute Reverberates in Richmond’s Historic
+                Landscape
+              </h2>
+              <p class="text-[#4B5157] text-[14px] max-w-[400px]">
+                Weaker carriers have fallen by the wayside amid fierce
+                competition, while others have been hit by bad luck. The result:
+                thousands of canceled flights.
+              </p>
+              <div class="flex gap-2 items-center">
+                <h5 class="text-[#939699] text-[12px]">Aug 6</h5>
+                <div><img src="./img/Comment.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">342</h5>
+                <div><img src="./img/Heart.svg" alt="" /></div>
+                <h5 class="text-[#939699] text-[12px]">830</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+      </div>
+
+      <div class="bg-[#FFFFFF] p-4 rounded-md md:col-span-1">
+        <h3 class="text-[#262D33] text-[14px] py-4">Recommended for you</h3>
+        <hr />
+        <div class="flex gap-2 items-center py-4">
+          <div><img src="./assets/15m.png" alt="" /></div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-[#4B5157] text-[14px]">
+              Office Meetings Leave <br />
+              the Office
+            </h4>
+            <p class="text-[#939699] text-[14px] max-w-[143px]">
+              15 minuts ago
+            </p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="flex gap-2 items-center py-4">
+          <div><img src="./assets/32m.png" alt="" /></div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-[#4B5157] text-[14px]">
+              Office Meetings Leave <br />
+              the Office
+            </h4>
+            <p class="text-[#939699] text-[14px] max-w-[143px]">
+              15 minuts ago
+            </p>
+          </div>
+        </div>
+        <hr />
+
+        <div class="flex gap-2 items-center py-4">
+          <div><img src="./assets/38m.png" alt="" /></div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-[#4B5157] text-[14px]">
+              Office Meetings Leave <br />
+              the Office
+            </h4>
+            <p class="text-[#939699] text-[14px] max-w-[143px]">
+              15 minuts ago
+            </p>
+          </div>
+        </div>
+        <hr />
+
+        <div class="flex gap-2 items-center py-4">
+          <div><img src="./assets/53m.png" alt="" /></div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-[#4B5157] text-[14px]">
+              Office Meetings Leave <br />
+              the Office
+            </h4>
+            <p class="text-[#939699] text-[14px] max-w-[143px]">
+              15 minuts ago
+            </p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="flex gap-2 items-center py-4">
+          <div><img src="./assets/1h.png" alt="" /></div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-[#4B5157] text-[14px]">
+              Office Meetings Leave <br />
+              the Office
+            </h4>
+            <p class="text-[#939699] text-[14px] max-w-[143px]">
+              15 minuts ago
+            </p>
+          </div>
+        </div>
+        <hr />
+
+        <div class="flex gap-2 items-center py-4">
+          <div><img src="./assets/1h2.png" alt="" /></div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-[#4B5157] text-[14px]">
+              Office Meetings Leave <br />
+              the Office
+            </h4>
+            <p class="text-[#939699] text-[14px] max-w-[143px]">
+              15 minuts ago
+            </p>
+          </div>
+        </div>
+        <hr />
+
+        <div class="flex gap-2 items-center py-4">
+          <div><img src="./assets/2h.png" alt="" /></div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-[#4B5157] text-[14px]">
+              Office Meetings Leave <br />
+              the Office
+            </h4>
+            <p class="text-[#939699] text-[14px] max-w-[143px]">
+              15 minuts ago
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="flex justify-center items-center py-4 text-[#262D33] text-[14px]"
+        >
+          <a class="hover:text-[red]" href="#">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="md:bg-[#262D33] grid grid-cols-1 p-1 md:grid-cols-2 md:gap-7 md:p-10"
+    >
+      <div
+        class="bg-[url('./assets/sarahbg.png')] bg-center bg-cover p-6 rounded-lg mb-5 md:mb-0"
+      >
+        <button class="px-3 py-1 mb-2 bg-[#FF4F52] text-white text-[12px]">
+          Hot
+        </button>
+        <div class="flex flex-col mb-3 items-center">
+          <div><img src="./assets/sarah.svg" alt="" /></div>
+          <p class="text-[14px] text-white my-2">By Sarah Jenkins</p>
+          <p class="text-[12px] text-white opacity-[40%] mb-7">Photographer</p>
+        </div>
+        <h2
+          class="max-w-[455px] text-white text-center text-[13px] md:text-[20px] mb-8 font-semibold md:text-[40px]"
+        >
+          Readers' Choice winners: Your wine country favorites
+        </h2>
+        <div class="flex justify-center">
+          <button
+            class="bg-[#4592FF] mb-14 text-[white] px-[40px] py-[10px] text-[14px] rounded-3xl flex gap-1 items-center"
+          >
+            <div><img src="./assets/photos.png" alt="" /></div>
+            Watch Photos <span>26</span>
+          </button>
+        </div>
+        <div class="mb-10 flex justify-center">
+          <img src="./assets/dots.png" alt="" />
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <div class="px-9 bg-[#B4D1E0] md:flex md:justify-between">
+          <div>
+            <p class="text-[#6E99AE] text-[12px] my-5">Careers</p>
+            <h2
+              class="max-w-[243px] font-semibold text-[25px] text-[#262D33] mb-4"
+            >
+              Had a Job Interview but No Callback? Here’s What to Do
+            </h2>
+            <p class="max-w-[243px] text-[#4B5157] text-[14px] mb-4">
+              Try to understand the culture of the company where you want to
+              work and be authentic in your interview, experts emphasize
+            </p>
+            <button
+              class="bg-[#4592FF] text-[white] px-[25px] py-[10px] text-[14px] rounded-3xl mb-5 md:mb-0"
+            >
+              Read more →
+            </button>
+          </div>
+          <div><img src="./assets/careergirl.png" alt="" /></div>
+        </div>
+        <div class="md:flex md:gap-10">
+          <div class="p-6 border bg-white border-gray-300 rounded-2xl mb-6">
+            <h3 class="text-[#262D33] text-[16px] mb-2">
+              Is Coffee Bad for Bones?
+            </h3>
+            <p class="text-[#4B5157] text-[14px] max-w-[270px] mb-2">
+              Coffee drinkers may excrete more calcium, but it doesn’t appear to
+              weaken bones
+            </p>
+            <p class="text-[#939699] text-[12px] mb-3">Oct 15</p>
+          </div>
+          <div class="p-6 border bg-white border-gray-300 rounded-2xl mb-6">
+            <h3 class="text-[#262D33] text-[16px] mb-2">What We Manufacture</h3>
+            <p class="text-[#4B5157] text-[14px] max-w-[270px] mb-2">
+              A global history of the factory and the modern world that all
+              should read
+            </p>
+            <p class="text-[#939699] text-[12px] mb-3">Oct 15</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14">
+      <h2
+        class="text-[25px] text-center md:text-[40px] mb-6 text-[#262D33] font-semibold"
+      >
+        Subscribe now and get 20% off
+      </h2>
+      <form
+        id="subscribe-form"
+        class="md:flex items-center justify-center space-x-2"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+          class="px-4 py-2 md:mb-0 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+        >
+          Subscribe
+        </button>
+      </form>
+    </section>
+    <footer class="bg-[#FFFFFF] px-4 py-7 md:px-[80px]">
+      <div
+        class="pb-[50px] grid grid-cols-2 gap-y-[8px] justify-between md:grid-cols-6"
+      >
+        <div class="flex flex flex-col gap-4 text-[#4B5157] text-[14px]">
+          <h4 class="text-[black]">News</h4>
+          <p>Nation</p>
+          <p>World</p>
+          <p>Politics</p>
+          <p>Solar Eclipse</p>
+        </div>
+
+        <div class="flex flex flex-col gap-4 text-[#4B5157] text-[14px]">
+          <h4 class="text-[black]">Arts</h4>
+          <p>Art & Design</p>
+          <p>Movies</p>
+          <p>People</p>
+          <p>Video: Arts</p>
+          <p>Theater</p>
+        </div>
+
+        <div class="flex flex flex-col gap-4 text-[#4B5157] text-[14px]">
+          <h4 class="text-[black]">Travel</h4>
+          <p>Destinations</p>
+          <p>Flights</p>
+          <p>Business Travel</p>
+        </div>
+
+        <div class="flex flex flex-col gap-4 text-[#4B5157] text-[14px]">
+          <h4 class="text-[black]">Sports</h4>
+          <p>Olympics</p>
+          <p>Motor Sports</p>
+          <p>Volleyball</p>
+          <p>MMA</p>
+          <p>Cycling</p>
+        </div>
+
+        <div class="flex flex flex-col gap-4 text-[#4B5157] text-[14px]">
+          <h4 class="text-[black]">Tech</h4>
+          <p>Tech</p>
+          <p>Tech Columnists</p>
+          <p>Tech Reviews</p>
+          <p>Talking Tech</p>
+        </div>
+
+        <div class="flex flex flex-col gap-4 text-[#4B5157] text-[14px]">
+          <h4 class="text-[black]">Moneys</h4>
+          <p>Markets</p>
+          <p>Business</p>
+          <p>Personal Finance</p>
+          <p>Retirement</p>
+          <p>Careers</p>
+        </div>
+      </div>
+      <hr />
+      <div
+        class="pt-[30px] flex flex-col gap-3 md:flex-row md:justify-between md:items-center pb-[40px]"
+      >
+        <div
+          class="flex gap-6 items-center justify-center text-[#262D33] text-[14px]"
+        >
+          <div><img src="./assets/logo.png" alt="" /></div>
+          <a href="#">Contact Us</a>
+          <a href="#">Work with Us</a>
+          <a href="#">Advertise</a>
+          <a href="#">Your Ad Choise</a>
+        </div>
+
+        <div class="flex gap-3 justify-center">
+          <img src="./assets/Round with icon-3.svg" alt="" />
+          <img src="./assets/Round with icon-2.svg" alt="" />
+          <img src="./assets/Round with icon-1.svg" alt="" />
+          <img src="./assets/Round with icon.svg" alt="" />
+        </div>
+      </div>
+      <hr />
+
+      <div
+        class="md:flex md:justify-between md:items-center pt-[30px] text-[#939699] text-[14px]"
+      >
+        <p class="hidden md:block">
+          Universal’s business concept is to offer fashion and quality at the
+          best price in a sustainable way. Universal has since it was <br />
+          founded in 2015 grown into one of the world's leading fashion
+          companies.
+        </p>
+        <a href="#">© 2019 Universal UI Kit</a>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
